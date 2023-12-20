@@ -1,0 +1,156 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px; /* This will add 20px of horizontal padding */
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.links a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px; /* This will make the links have rounded edges */
+    transition: background-color 0.3s ease; /* This will animate the background color change */
+    font-family: 'Inter', sans-serif;
+}
+
+.links a:hover {
+    background-color: lightgrey; /* This will change the background color to light grey when hovered over */
+}
+
+.nav-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* This will hide the pseudo-element when it's outside the .logo container */
+    cursor: pointer; /* This will change the cursor to a pointer when hovering over the logo */
+}
+
+.logo img {
+    width: 120px;
+    border: none;
+    display: block;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 255, 0.25);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: 2;
+}
+
+.logo:hover::after {
+    transform: translateX(0);
+}
+
+/* Hero section */
+
+.main-content {
+    /* Remove default margins */
+    margin: 0;
+    padding: 0;
+
+    /* Align items vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    height: calc(80vh); /* Replace 60px with the actual height of your navigation */
+
+    /* Add a background image */
+    background-image: url('media/hero-background.jpeg');
+    background-size: cover; /* Cover the entire area of the div */
+    background-position: center; /* Center the image */
+    position: relative;
+}
+
+.main-content::before {
+    /* Create a pseudo-element */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Create a gradient overlay */
+    background: linear-gradient(to bottom, white 0%, transparent 30%, transparent 70%, white 100%);
+}
+
+.content {
+    /* Align items vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.main-content h1 {
+    /* Additional styling for the heading */
+    margin-bottom: 20px; /* Add this property and adjust as needed */
+    font-size: 70px;
+}
+
+.intro {
+    width: 40%;
+    text-align: center;
+    margin-top: 0; /* Set this to 0 to remove any additional space */
+    color: #888888; /* Set the font color to a darker gray */
+    line-height: 1.5; /* Increase the line spacing to improve readability */
+}
+
+.cta-button {
+    /* Adjust the size of the button */
+    padding: 18.75px 37.5px; /* Increase padding by 25% */
+    font-size: 25px; /* Increase font size by 25% */
+    margin-top: 50px; /* Increase margin-top by 25% */
+
+    /* Add rounded edges */
+    border-radius: 62.5px; /* Increase border-radius by 25% */
+
+    /* Change the background and text color */
+    background-color: #007BFF; /* Change this to your preferred color */
+    color: white;
+
+    /* Add some hover effect */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    cursor: pointer;
+}
+
+/* Style the icon inside the button */
+.cta-button i {
+    margin-left: 12.5px; /* Increase margin-left by 25% */
+}
