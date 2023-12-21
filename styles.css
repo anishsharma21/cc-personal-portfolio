@@ -56,18 +56,20 @@ body {
 .logo::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.2); /* Start with a smaller scale */
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 255, 0.25);
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
+    background: hsla(0, 100%, 50%, 0); /* Initial color is transparent */
+    border-radius: 50%;
+    transition: transform 0.5s ease, background 0.5s ease; /* Add background transition */
     z-index: 2;
 }
 
 .logo:hover::after {
-    transform: translateX(0);
+    transform: translate(-50%, -50%) scale(0.9); /* Grow into the initial state */
+    background: hsla(360, 100%, 50%, 0.25); /* Increase hue to 360 (full circle) */
 }
 
 
