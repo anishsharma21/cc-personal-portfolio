@@ -274,3 +274,25 @@ body {
     font-size: 25px; /* Make the icons larger */
 }
 
+#scrollTopButton {
+    font-size: 24px; /* Make the icon larger */
+    display: none;
+    position: fixed;
+    bottom: 50%; /* Center vertically */
+    right: 40px; /* Increase the gap between the button and the side of the window */
+    z-index: 99; /* Make sure it sits on top of other elements */
+    width: 60px; /* Make the button wider */
+    height: 60px; /* Make the button taller */
+    padding: 10px; /* Add some padding */
+    border-radius: 15%; /* Add this line to make the button circular */
+    /* Add your other styles (background color, color, border, etc.) */
+}
+
+#scrollTopButton:hover {
+    background-color: lightblue; /* Change the background color on hover */
+    cursor: pointer;
+}
+
+#scrollTopButton:hover i {
+    cursor: pointer;
+}
