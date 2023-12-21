@@ -69,7 +69,7 @@ body {
 
 .logo:hover::after {
     transform: translate(-50%, -50%) scale(0.9); /* Grow into the initial state */
-    background: hsla(360, 100%, 50%, 0.25); /* Increase hue to 360 (full circle) */
+    background: hsla(240, 100%, 50%, 0.25); /* Change hue to 240 for blue */
 }
 
 
@@ -289,7 +289,7 @@ body {
 }
 
 #scrollTopButton:hover {
-    background-color: lightblue; /* Change the background color on hover */
+    background-color: hsla(240, 100%, 50%, 0.25); /* Change the background color on hover */
     cursor: pointer;
 }
 
